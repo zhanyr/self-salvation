@@ -12,6 +12,7 @@
         <module>self-salvation-jdk8</module>
         <module>self-salvation-spring</module>
         <module>self-salvation-multithread</module>
+        <module>self-salvation-design-pattern</module>
     </modules>
 
 
