@@ -31,6 +31,7 @@ public class ClassLoaderTest {
 
         Object o = clazz.newInstance();
 
+        
         clazz.getMethod("code", null).invoke(o, null);
 
 
