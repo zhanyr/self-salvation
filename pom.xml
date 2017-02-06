@@ -13,6 +13,7 @@
         <module>self-salvation-spring</module>
         <module>self-salvation-multithread</module>
         <module>self-salvation-design-pattern</module>
+        <module>self-salvation-leetcode</module>
     </modules>
 
 
