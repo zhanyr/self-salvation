@@ -22,8 +22,8 @@ import java.util.List;
 public class LengthOfLongestSubstring {
     private static final Logger LOGGER = LoggerFactory.getLogger(LengthOfLongestSubstring.class);
 
-    public int lengthOfLongestSubstring(String s){
-        if(null == s || "".equals(s.trim())){
+    public int lengthOfLongestSubstring(String s) {
+        if (null == s || "".equals(s.trim())) {
             return 0;
         }
         int max = 0;
@@ -31,9 +31,9 @@ public class LengthOfLongestSubstring {
 
         List<Character> list = new ArrayList<>();
         int i = 0;
-        while(i < s.length()){
+        while (i < s.length()) {
             char elem = s.charAt(i);
-            if(list.contains(elem)){
+            if (list.contains(elem)) {
                 int index = list.indexOf(elem);
                 list = list.subList(index + 1, list.size());
                 max = tmp > max ? tmp : max;
