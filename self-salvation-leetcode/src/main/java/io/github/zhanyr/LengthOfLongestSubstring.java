@@ -3,8 +3,8 @@ package io.github.zhanyr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author zhanyr
@@ -26,25 +26,20 @@ public class LengthOfLongestSubstring {
         if (null == s || "".equals(s.trim())) {
             return 0;
         }
+        Map<Character, Integer> map = new HashMap<>();
+
         int max = 0;
         int tmp = 0;
 
-        List<Character> list = new ArrayList<>();
-        int i = 0;
-        while (i < s.length()) {
-            char elem = s.charAt(i);
-            if (list.contains(elem)) {
-                int index = list.indexOf(elem);
-                list = list.subList(index + 1, list.size());
-                max = tmp > max ? tmp : max;
-                tmp = list.size();
-            } else {
-                list.add(elem);
-                tmp++;
-                i++;
+        for (int i = 0; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                tmp = tmp > (map.get(s.charAt(i)) + 1) ? tmp : (map.get(s.charAt(i)) + 1);
             }
+            max = i - tmp + 1 > max ? (i - tmp + 1) : max;
+            map.put(s.charAt(i), i);
+
         }
-        return tmp > max ? tmp : max;
+        return max;
     }
 
     public static void main(String[] args) {
