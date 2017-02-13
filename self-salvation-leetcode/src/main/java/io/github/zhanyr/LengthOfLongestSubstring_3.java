@@ -10,7 +10,8 @@ import java.util.Map;
  * @Author zhanyr
  * @Create 2017-02-10 4:40 PM
  * @Desc
- * Given a string, find the length of the longest substring without repeating characters.
+ *
+ * 3.Given a string, find the length of the longest substring without repeating characters.
  *
  * Examples:
  * Given "abcabcbb", the answer is "abc", which the length is 3.
@@ -19,8 +20,8 @@ import java.util.Map;
  * Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  *
  */
-public class LengthOfLongestSubstring {
-    private static final Logger LOGGER = LoggerFactory.getLogger(LengthOfLongestSubstring.class);
+public class LengthOfLongestSubstring_3 {
+    private static final Logger LOGGER = LoggerFactory.getLogger(LengthOfLongestSubstring_3.class);
 
     public int lengthOfLongestSubstring(String s) {
         if (null == s || "".equals(s.trim())) {
@@ -43,7 +44,7 @@ public class LengthOfLongestSubstring {
     }
 
     public static void main(String[] args) {
-        LengthOfLongestSubstring substring = new LengthOfLongestSubstring();
+        LengthOfLongestSubstring_3 substring = new LengthOfLongestSubstring_3();
         System.out.println(substring.lengthOfLongestSubstring(""));
         System.out.println(substring.lengthOfLongestSubstring("abcabcbb"));
         System.out.println(substring.lengthOfLongestSubstring("bbbbb"));

@@ -7,7 +7,8 @@ import org.slf4j.LoggerFactory;
  * @Author zhanyr
  * @Create 2017-02-06 10:38 PM
  * @Desc
- * You are given two non-empty linked lists representing two non-negative integers.
+ * 
+ * 2.You are given two non-empty linked lists representing two non-negative integers.
  * The digits are stored in reverse order and each of their nodes contain a single digit.
  * Add the two numbers and return it as a linked list.
  * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
@@ -15,8 +16,8 @@ import org.slf4j.LoggerFactory;
  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  * Output: 7 -> 0 -> 8
  */
-public class AddTwoNumbers {
-    private static final Logger LOGGER = LoggerFactory.getLogger(AddTwoNumbers.class);
+public class AddTwoNumbers_2 {
+    private static final Logger LOGGER = LoggerFactory.getLogger(AddTwoNumbers_2.class);
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode listNode = null;
@@ -77,7 +78,7 @@ public class AddTwoNumbers {
         listNode22.next = listNode23;
         listNode21.next = listNode22;
 
-        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+        AddTwoNumbers_2 addTwoNumbers = new AddTwoNumbers_2();
         ListNode listNode = addTwoNumbers.addTwoNumbers(listNode11, listNode21);
         System.out.println(listNode);
 
