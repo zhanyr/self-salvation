@@ -14,10 +14,15 @@ public class MultiThread1 extends Thread {
     public static void main(String[] args) {
         Thread thread = new MultiThread1();
         thread.start();
+        for (int i = 0; i < 200; i++) {
+            System.out.println("hello,world!");
+        }
     }
 
     @Override
     public void run(){
-        System.out.println("thread run...");
+        for (int i = 0; i < 200; i++) {
+            System.out.println("thread run...");
+        }
     }
 }
